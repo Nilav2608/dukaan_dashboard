@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -23,20 +24,20 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
+    - assets/icons/
 
   fonts:
-    - family: Galano Grotesque
+    - family: Galano
       fonts:
-        - asset: assets/fonts/GalanoGrotesqueRegular.otf
+        - asset: assets/fonts/GalanoGrotesqueRegular.ttf
           weight: 400
-        - asset: assets/fonts/GalanoGrotesqueMedium.otf
+        - asset: assets/fonts/GalanoGrotesqueMedium.ttf
           weight: 500
-        - asset: assets/fonts/GalanoGrotesqueSemiBold.otf
+        - asset: assets/fonts/GalanoGrotesqueSemiBold.ttf
           weight: 600  
-        - asset: assets/fonts/GalanoGrotesqueBold.otf
+        - asset: assets/fonts/GalanoGrotesqueBold.ttf
           weight: 700  
 
     - family: Inter
