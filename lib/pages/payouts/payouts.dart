@@ -1,3 +1,5 @@
+import 'package:dukaan_dashboard/pages/payouts/utils/next_payout_card.dart';
+import 'package:dukaan_dashboard/pages/payouts/utils/pay_details_card.dart';
 import 'package:dukaan_dashboard/pages/payouts/utils/payouts_header.dart';
 import 'package:flutter/material.dart';
 
@@ -42,6 +44,7 @@ class _PayoutsState extends State<Payouts> {
                           fontFamily: 'Galano',
                           fontWeight: FontWeight.w500),
                     ),
+                    //Drop down button
                     Container(
                       width: 137,
                       height: 36,
@@ -90,12 +93,45 @@ class _PayoutsState extends State<Payouts> {
                           );
                         }).toList(),
                       ),
-                    )
+                    ),
                   ],
                 ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NextPayoutCard(
+                      amount: '2,312.23',
+                      date: 'Today, 04:00PM',
+                    ),
+                    // Eligible and Non Eligible amounts
+                    Column(
+                      children: [
+                        PayDetailsCard(
+                            heading: "Eligible Amount", amount: "2,312.20"),
+                        SizedBox(height: 20),
+                        PayDetailsCard(
+                            heading: "Not Eligible Amount", amount: "92,312.20")
+                      ],
+                    ),
+
+                    //Refunds and completed payouts
+                    Column(
+                      children: [
+                        PayDetailsCard(heading: "Refunds", amount: "2,333"),
+                        SizedBox(height: 20),
+                        PayDetailsCard(
+                            heading: "Completed Payouts",
+                            amount: "23,92,312.19")
+                      ],
+                    )
+                  ],
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
     );
