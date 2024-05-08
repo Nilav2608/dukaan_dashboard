@@ -30,7 +30,7 @@ class SidebarHeader extends StatelessWidget {
                   Text(
                     "Nishyan",
                     style: TextStyle(
-                        color: Color(0xffD2D4D9),
+                        color: Colors.white,
                         fontSize: 15,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w500),
@@ -38,7 +38,7 @@ class SidebarHeader extends StatelessWidget {
                   Text(
                     "Visit store",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xffD2D4D9),
                         decoration: TextDecoration.underline,
                         decorationColor: Color(0xffD2D4D9),
                         fontSize: 15,
