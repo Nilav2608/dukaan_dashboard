@@ -1,3 +1,4 @@
+import 'package:dukaan_dashboard/data/transactions_info_data.dart';
 import 'package:dukaan_dashboard/pages/payouts/utils/next_payout_card.dart';
 import 'package:dukaan_dashboard/pages/payouts/utils/pay_details_card.dart';
 import 'package:dukaan_dashboard/pages/payouts/utils/payouts_header.dart';
@@ -18,7 +19,10 @@ List<String> options = <String>[
 ];
 String dropdownValue = 'This Month';
 
+int selectedTindex = 0;
+
 class _PayoutsState extends State<Payouts> {
+  TransactionsInfoData data = TransactionsInfoData();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,6 +36,7 @@ class _PayoutsState extends State<Payouts> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,7 +121,6 @@ class _PayoutsState extends State<Payouts> {
                             heading: "Not Eligible Amount", amount: "92,312.20")
                       ],
                     ),
-
                     //Refunds and completed payouts
                     Column(
                       children: [
@@ -128,6 +132,63 @@ class _PayoutsState extends State<Payouts> {
                       ],
                     )
                   ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Text(
+                  "Transactions | This Month",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontFamily: 'Galano',
+                      fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //Transactions Info chips
+                SizedBox(
+                  width: double.infinity,
+                  height: 32,
+                  child: ListView.builder(
+                      itemCount: data.tdata.length,
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        var info = data.tdata[index];
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 12.0),
+                          child: InkWell(
+                            onTap: () => setState(() {
+                              selectedTindex = index;
+                            }),
+                            child: Container(
+                                height: 32,
+                                decoration: BoxDecoration(
+                                    color: selectedTindex == index
+                                        ? const Color(0xff146EB4)
+                                        : const Color(0xffE6E6E6),
+                                    borderRadius: BorderRadius.circular(40)),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 16.0, vertical: 6),
+                                    child: Text(
+                                      "${info.transactionName} (${info.counts})",
+                                      style: TextStyle(
+                                          color: selectedTindex == index
+                                              ? const Color(0xffFFFFFF)
+                                              : const Color(0xff808080),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                )),
+                          ),
+                        );
+                      }),
                 )
               ],
             ),
