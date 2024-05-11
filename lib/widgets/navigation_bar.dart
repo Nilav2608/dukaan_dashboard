@@ -86,7 +86,7 @@ class _SideNavigationBarState extends State<SideNavigationBar> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Container(
-                    width: 192,
+                    width: double.infinity,
                     height: 54,
                     decoration: BoxDecoration(
                         color: const Color(0xff353C53),
