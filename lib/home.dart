@@ -10,11 +10,11 @@ class Home extends StatelessWidget {
     return const Scaffold(
         body: Row(
       children: [
-        Expanded(flex: 2, child: SideNavigationBar()),
         Expanded(
-            flex: 9,
-            child: Payouts()
-        )
+          flex: 33,
+          child: SideNavigationBar(),
+        ),
+        Expanded(flex: 185, child: Payouts())
       ],
     ));
   }
