@@ -13,22 +13,22 @@ class SideMenuData {
         iconPath: 'assets/icons/delivery.svg',
         name: "Delivery",),
     SideMenuModel(
-        iconPath: 'assets/icons/Marketing.svg',
+        iconPath: 'assets/icons/marketing.svg',
         name: "Marketing",),
     SideMenuModel(
         iconPath: 'assets/icons/analytics.svg',
         name: "Analytics",),
     SideMenuModel(
-        iconPath: 'assets/icons/Payouts.svg',
+        iconPath: 'assets/icons/payouts.svg',
         name: "Payouts",),
     SideMenuModel(
         iconPath: 'assets/icons/discounts.svg',
         name: "Discounts",),
     SideMenuModel(
-        iconPath: 'assets/icons/Audience.svg',
+        iconPath: 'assets/icons/audience.svg',
         name: "Audience",),
     SideMenuModel(
-        iconPath: 'assets/icons/Appearance.svg',
+        iconPath: 'assets/icons/appearance.svg',
         name: "Appearance",),
     SideMenuModel(
         iconPath: 'assets/icons/plugins.svg',
