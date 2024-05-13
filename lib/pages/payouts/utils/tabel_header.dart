@@ -18,7 +18,7 @@ class TabelHeader extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 12.0, top: 10, bottom: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -48,7 +48,7 @@ class TabelHeader extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -71,7 +71,7 @@ class TabelHeader extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -94,7 +94,7 @@ class TabelHeader extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -118,7 +118,7 @@ class TabelHeader extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -140,9 +140,9 @@ class TabelHeader extends StatelessWidget {
           ),
           //* column
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.only(top: 10,bottom: 10,right: 12),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
