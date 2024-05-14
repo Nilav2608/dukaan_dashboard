@@ -8,7 +8,7 @@ class TabelRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double verticalPadding = 14;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       // height: 40,
       child: Row(
@@ -18,7 +18,7 @@ class TabelRow extends StatelessWidget {
             padding: const EdgeInsets.only(
                 left: 12.0, top: verticalPadding, bottom: verticalPadding),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -41,7 +41,7 @@ class TabelRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: verticalPadding),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -79,7 +79,7 @@ class TabelRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 children: [
@@ -102,7 +102,7 @@ class TabelRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -126,7 +126,7 @@ class TabelRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -150,7 +150,7 @@ class TabelRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: SizedBox(
-              width: 150.67,
+              width: 157.67,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
